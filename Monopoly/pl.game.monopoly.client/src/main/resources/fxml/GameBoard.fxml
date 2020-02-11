@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.game.monopoly.client.controllers.GameBoardController">
+   <children>
+
+            <GridPane fx:id="GameBoardFXML" alignment="CENTER" gridLinesVisible="true" layoutX="29.5" layoutY="29.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600" stylesheets="@../css/GameBoard.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="10.0">
+             <columnConstraints>
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="91.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="58.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="56.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="52.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="58.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="58.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="56.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="57.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="56.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="53.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="95.0" />
+             </columnConstraints>
+             <rowConstraints>
+                 <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="175.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="174.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="178.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="131.0" minHeight="0.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="155.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+
+                </rowConstraints>
+         <children>
+            <Circle fx:id="playerTwoPawn" fill="#ff1f3c" radius="12.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+            <Circle fx:id="playerOnePawn" radius="12.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+         </children>
+         </GridPane>
+      <Button fx:id="rollButton" layoutX="676.0" layoutY="177.0" mnemonicParsing="false" onAction="#rollButtonClicked" prefHeight="63.0" prefWidth="60.0" text="ROLL" textFill="#e41414" AnchorPane.rightAnchor="204.0" AnchorPane.topAnchor="177.0" />
+      <TextField fx:id="rollResultField" alignment="CENTER" layoutX="804.0" layoutY="177.0" prefHeight="63.0" prefWidth="60.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="177.0" />
+      <Text fx:id="cashText" layoutX="732.0" layoutY="636.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR CASH:" AnchorPane.rightAnchor="200.9453125" AnchorPane.topAnchor="623.05078125" />
+      <Button fx:id="buyButton" layoutX="680.0" layoutY="250.0" mnemonicParsing="false" onAction="#buyButtonClicked" text="BUY" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="250.0" />
+      <Button fx:id="sellButton" layoutX="1195.0" layoutY="250.0" mnemonicParsing="false" onAction="#sellButtonClicked" text="SELL" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="250.0" />
+      <ListView fx:id="listOfFields" layoutX="662.0" layoutY="282.0" prefHeight="316.0" prefWidth="200.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="282.0" />
+      <Label fx:id="fieldLabel" alignment="CENTER" layoutX="728.0" layoutY="115.0" prefHeight="33.0" prefWidth="253.0" text="Label" />
+      <Label layoutX="726.0" layoutY="89.0" prefHeight="17.0" prefWidth="159.0" text="Twój pionek znajduje się na:" />
+      <Label fx:id="cashLabel" layoutX="820.0" layoutY="623.0" prefHeight="17.0" prefWidth="114.0" text="Label" />
+      
+   </children>
+</AnchorPane>

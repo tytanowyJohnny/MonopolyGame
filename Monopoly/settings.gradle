@@ -1,0 +1,5 @@
+rootProject.name = 'Monopoly'
+include ':pl.game.monopoly.core'
+include ':pl.game.monopoly.server'
+include 'pl.game.monopoly.client'
+

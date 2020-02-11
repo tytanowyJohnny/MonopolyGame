@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="278.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.game.monopoly.client.controllers.InfoMessageController">
+   <children>
+      <Label fx:id="infoMessageLabel" alignment="CENTER" layoutX="72.0" layoutY="61.0" prefHeight="124.0" prefWidth="309.0" text="Label" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="infoMessageButton" onAction="#handleInfoMessageButton" layoutX="215.0" layoutY="212.0" mnemonicParsing="false" text="OK" />
+   </children>
+</AnchorPane>

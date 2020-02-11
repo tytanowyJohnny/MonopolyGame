@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'org.beryx.jlink' version '2.12.0'
+}
+
+group 'pl.game.monopoly'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation project(':pl.game.monopoly.core')
+}
+
+javafx {
+    version = "12.0.2"
+    modules = [ 'javafx.controls' , 'javafx.fxml', 'javafx.graphics']
+}
+
+mainClassName = "pl.game.monopoly.client.MainApp"
+jlink {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'monopolyclient'
+    }
+}
